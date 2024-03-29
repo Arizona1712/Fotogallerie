@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: lightyellow;
+    padding: 140px 120px 100px 120px;
+    font-family: "Rubik Burned", system-ui;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.scrollbar {
+    overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey lightgrey;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    padding: 16px 32px 8px 32px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+a:hover {
+    color: lightyellow;
+    font-weight: bold;
+}
+
+.rubik-burned-regular {
+    font-family: "Rubik Burned", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+h1 {
+    font-family: "Rubik Burned", system-ui;
+    font-size: 48px;
+    color: darkcyan;
+    margin: 0;
+}
+
+h1:hover {
+    filter: drop-shadow(1px 1px 6px rgb(0, 0, 0, 0.6));
+}
+
+.nav-middle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.logo {
+    height: auto;
+    width: 40px;
+}
+
+.logo:hover {
+    filter: drop-shadow(1px 1px 6px rgb(0, 0, 0, 0.6));
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-icon:hover {
+    filter: drop-shadow(1px 1px 6px rgb(0, 0, 0, 0.6));
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.overlayMenu {
+    background-color: rgb(18 119 118 / 90%);;
+    border-right: 1px solid rgb(173, 169, 169);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 180px;
+    transform: translateX(-200px);
+    transition: all 225ms ease-in-out;
+    padding: 36px 16px 16px 32px;
+    gap: 32px;
+}
+
+.showOverlayMenu {
+    transform: translateX(0);
+}
+
+.img-container {
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-box {
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    flex: 1;
+    box-shadow: -2px 2px 3px 0 rgba(0,0,0,30%);
+}
+
+.img-box:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.img-box img {
+    object-fit: cover;
+}
+
+.main-overlay {
+    display: flex;
+}
+
+.img-big {
+    height: auto;
+    width: 80%;
+    box-shadow: -2px 2px 3px 0 rgba(0,0,0,30%);
+    object-fit: contain;
+}
+
+.img-overlay {
+    background-color: rgb(18 119 118);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.img-big-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.can {
+    width: 30px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}
+
+.arrow {
+    height: 60px;
+}
+
+.arrow:hover {
+    filter: drop-shadow(1px 1px 6px rgb(255, 255, 255, 0.6));
+    cursor: pointer;
+}
+
+@media (max-width:1024px) {
+    body {
+        padding: 120px 100px 80px 100px;
+    }
+    .arrow {
+        height: 50px;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        padding: 120px 60px 80px 60px;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;    
+    }
+
+    .overlayMenu {
+        padding: 39px 16px 16px 32px;
+        gap: 24px;
+        height: 150px;
+    }
+
+    .img-big-box {
+        flex-direction: column;
+    }
+
+    .img-big {
+        width: 95%;
+    }
+}
+
+@media (max-width:480px) {
+    body{
+        padding: 100px 40px 60px 40px;
+    }
+    .d-none {
+        display: none;
+    }
+    .arrow {
+        height: 32px;
+    }
+    .logo {
+        width: 30px;
+    }
+}
+
+@media (max-width:425px) {
+    body{
+        padding: 90px 40px 60px 40px;
+    }
+}

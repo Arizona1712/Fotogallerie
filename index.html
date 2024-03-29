@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="render()" class="scrollbar">
+    <nav>
+        <div class="overlayMenu" id="b-menu">
+            <div class="menu-icon" onclick="closeMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>                
+                <div class="bar"></div>
+            </div>
+            
+            <a href="#" onclick="render()">Favoriten</a>
+            <a href="#" onclick="openTrash()">Papierkorb</a>
+        </div>
+    
+        <div class="menu-icon" onclick="showMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>                
+            <div class="bar"></div>
+        </div>
+        <div class="nav-middle">
+            <a href="#" onclick="render()"><img class="logo" src="./img/logo.png"></a>
+            <a href="#" class="d-none" onclick="render()"><h1>My Photo</h1></a>
+        </div>
+        <a href="#"><img class="logo" src="./img/can.png" onclick="openTrash()"></a>
+    </nav>
+
+    <div id="content" class="img-container">
+        
+    </div>
+    <div id="imgOverlay" class="img-overlay hide">  
+
+    </div>
+</body>
+</html>
